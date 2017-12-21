@@ -1,0 +1,3 @@
+[submodule "submodules/tinymce"]
+	path = submodules/tinymce
+	url = https://principleware@github.com/principleware/tinymce.git
