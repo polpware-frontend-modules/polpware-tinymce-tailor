@@ -15,11 +15,11 @@
  * @class tinymce.util.Tools
  */
 define(
-  'principleware-tinymce-tailor/util/Tools',
+  'principleware-tinymce-tailor/src/util/Tools',
   [
 //    'global!window',
 //    'tinymce.core.Env',
-    'principleware-tinymce-tailor/util/Arr'
+    'principleware-tinymce-tailor/src/util/Arr'
   ],
 //    function (window, Env, Arr) {
   function (Arr) {

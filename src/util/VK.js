@@ -12,7 +12,7 @@
  * This file exposes a set of the common KeyCodes for use. Please grow it as needed.
  */
 define(
-  'principleware-tinymce-tailor/util/VK',
+  'principleware-tinymce-tailor/src/util/VK',
   [
     "tinymce.core.Env"
   ],

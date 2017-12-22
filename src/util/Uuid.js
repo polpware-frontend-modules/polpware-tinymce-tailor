@@ -15,7 +15,7 @@
  * @private
  */
 define(
-  'principleware-tinymce-tailor/util/Uuid',
+  'principleware-tinymce-tailor/src/util/Uuid',
   [
   ],
   function () {

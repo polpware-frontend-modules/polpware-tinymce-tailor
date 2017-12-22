@@ -15,7 +15,7 @@
  * @class tinymce.util.Arr
  */
 define(
-  'principleware-tinymce-tailor/util/Arr',
+  'principleware-tinymce-tailor/src/util/Arr',
   [
   ],
   function () {

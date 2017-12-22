@@ -28,7 +28,7 @@
  * var value = tinymce.util.LocalStorage.getItem('key');
  */
 define(
-  'principleware-tinymce-tailor/util/LocalStorage',
+  'principleware-tinymce-tailor/src/util/LocalStorage',
   [
     'global!document',
     'global!window'

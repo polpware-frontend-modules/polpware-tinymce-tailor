@@ -13,10 +13,10 @@
  * @class tinymce.util.URI
  */
 define(
-  'principleware-tinymce-tailor/util/URI',
+  'principleware-tinymce-tailor/src/util/URI',
   [
     'global!document',
-    'principleware-tinymce-tailor/util/Tools'
+    'principleware-tinymce-tailor/src/util/Tools'
   ],
   function (document, Tools) {
     var each = Tools.each, trim = Tools.trim;

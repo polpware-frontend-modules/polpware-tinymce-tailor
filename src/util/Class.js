@@ -20,9 +20,9 @@
  * * Defaults settings
  */
 define(
-  'principleware-tinymce-tailor/util/Class',
+  'principleware-tinymce-tailor/src/util/Class',
   [
-    "principleware-tinymce-tailor/util/Tools"
+    "principleware-tinymce-tailor/src/util/Tools"
   ],
   function (Tools) {
     var each = Tools.each, extend = Tools.extend;

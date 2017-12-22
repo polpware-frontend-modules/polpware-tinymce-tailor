@@ -28,12 +28,12 @@
  * });
  */
 define(
-    'principleware-tinymce-tailor/util/XHR',
+    'principleware-tinymce-tailor/src/util/XHR',
     [
         //    'ephox.sand.api.XMLHttpRequest',
         //    'global!setTimeout',
-        'principleware-tinymce-tailor/util/Observable',
-        'principleware-tinymce-tailor/util/Tools'
+        'principleware-tinymce-tailor/src/util/Observable',
+        'principleware-tinymce-tailor/src/util/Tools'
     ],
     //    function (XMLHttpRequest, setTimeout, Observable, Tools) {
     function (Observable, Tools) {        

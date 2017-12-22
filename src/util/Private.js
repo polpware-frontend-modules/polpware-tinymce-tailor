@@ -15,9 +15,9 @@
  * @private
  */
 define(
-  'principleware-tinymce-tailor/util/Private',
+  'principleware-tinymce-tailor/src/util/Private',
   [
-    "principleware-tinymce-tailor/util/Uuid"
+    "principleware-tinymce-tailor/src/util/Uuid"
   ],
   function (Uuid) {
     var fieldName = Uuid.uuid('private');

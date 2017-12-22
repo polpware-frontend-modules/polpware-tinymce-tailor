@@ -17,7 +17,7 @@
  * Modifed to be a feature fill and wrapped as tinymce module.
  */
 define(
-  'principleware-tinymce-tailor/util/Promise',
+  'principleware-tinymce-tailor/src/util/Promise',
   [],
   function () {
     if (window.Promise) {
