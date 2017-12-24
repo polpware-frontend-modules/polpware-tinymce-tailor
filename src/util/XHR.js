@@ -51,10 +51,10 @@ define(
                 var ready = function () {
                     if (!settings.async || xhr.readyState == 4 || count++ > 10000) {
                         if (settings.success && count < 10000 && xhr.status == 200) {
-                            if (settings.response_type === 'blob' || settings.response_type === 'arraybuffer') {
-                                settings.success.call(settings.success_scope, xhr.response, xhr, settings);                      
+                            if (settings.response_type === '' || settings.response_type === 'text') {
+                                settings.success.call(settings.success_scope, '' + xhr.responseText, xhr, settings);                                
                             } else {
-                                settings.success.call(settings.success_scope, '' + xhr.responseText, xhr, settings);
+                                settings.success.call(settings.success_scope, xhr.response, xhr, settings);                      
                             }
                         } else if (settings.error) {
                             settings.error.call(settings.error_scope, count > 10000 ? 'TIMED_OUT' : 'GENERAL', xhr, settings);
