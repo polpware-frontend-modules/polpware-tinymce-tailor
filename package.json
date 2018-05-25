@@ -1,9 +1,9 @@
 {
-  "name": "principleware-tinymce-tailor",
+  "name": "polpware-tinymce-tailor",
   "version": "4.7.6",
   "repository": {
     "type": "git",
-    "url": "https://github.com/principleware/principleware-tinymce-tailor.git"
+    "url": "https://github.com/polpware/polpware-tinymce-tailor.git"
   },
   "description": "A set of self-contained utilities generated from TinyMCE",
   "author": "Tom Tang",
