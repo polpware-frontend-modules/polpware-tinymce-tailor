@@ -15,9 +15,9 @@
  * @class tinymce.util.I18n
  */
 define(
-  'principleware-tinymce-tailor/src/util/I18n',
+  'polpware-tinymce-tailor/src/util/I18n',
   [
-    "principleware-tinymce-tailor/src/util/Tools"
+    "polpware-tinymce-tailor/src/util/Tools"
   ],
   function (Tools) {
     "use strict";

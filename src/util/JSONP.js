@@ -9,7 +9,7 @@
  */
 
 define(
-  'principleware-tinymce-tailor/src/util/JSONP',
+  'polpware-tinymce-tailor/src/util/JSONP',
   [
     "tinymce.core.dom.DOMUtils"
   ],

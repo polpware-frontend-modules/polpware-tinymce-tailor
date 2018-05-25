@@ -19,7 +19,7 @@
  * console.log(white.toHex(), red.toHsv());
  */
 define(
-  'principleware-tinymce-tailor/src/util/Color',
+  'polpware-tinymce-tailor/src/util/Color',
   [
   ],
   function () {

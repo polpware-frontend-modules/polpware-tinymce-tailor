@@ -21,7 +21,7 @@
  * var str = tinymce.util.JSON.serialize(obj);
  */
 define(
-  'principleware-tinymce-tailor/src/util/JSON',
+  'polpware-tinymce-tailor/src/util/JSON',
   [
     'global!window'
   ],

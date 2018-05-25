@@ -14,7 +14,7 @@
  * @class tinymce.util.Delay
  */
 define(
-  'principleware-tinymce-tailor/src/util/Delay',
+  'polpware-tinymce-tailor/src/util/Delay',
   [
     'global!clearInterval',
     'global!clearTimeout',
@@ -22,7 +22,7 @@ define(
     'global!setInterval',
     'global!setTimeout',
     'global!window',
-    'principleware-tinymce-tailor/src/util/Promise'
+    'polpware-tinymce-tailor/src/util/Promise'
   ],
   function (clearInterval, clearTimeout, document, setInterval, setTimeout, window, Promise) {
     var requestAnimationFramePromise;

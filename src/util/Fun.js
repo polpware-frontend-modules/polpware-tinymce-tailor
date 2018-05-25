@@ -15,7 +15,7 @@
  * @class tinymce.util.Fun
  */
 define(
-  'principleware-tinymce-tailor/src/util/Fun',
+  'polpware-tinymce-tailor/src/util/Fun',
   [
   ],
   function () {

@@ -20,9 +20,9 @@
  *  eventDispatcher.fire('click', {data: 123});
  */
 define(
-  'principleware-tinymce-tailor/src/util/EventDispatcher',
+  'polpware-tinymce-tailor/src/util/EventDispatcher',
   [
-    "principleware-tinymce-tailor/src/util/Tools"
+    "polpware-tinymce-tailor/src/util/Tools"
   ],
   function (Tools) {
     var nativeEvents = Tools.makeMap(

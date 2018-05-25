@@ -17,16 +17,16 @@
  * @class tinymce.util.Quirks
  */
 define(
-  'principleware-tinymce-tailor/src/util/Quirks',
+  'polpware-tinymce-tailor/src/util/Quirks',
   [
     'global!document',
     'global!window',
     'tinymce.core.Env',
     'tinymce.core.caret.CaretContainer',
     'tinymce.core.selection.CaretRangeFromPoint',
-    'principleware-tinymce-tailor/src/util/Delay',
-    'principleware-tinymce-tailor/src/util/Tools',
-    'principleware-tinymce-tailor/src/util/VK'
+    'polpware-tinymce-tailor/src/util/Delay',
+    'polpware-tinymce-tailor/src/util/Tools',
+    'polpware-tinymce-tailor/src/util/VK'
   ],
   function (document, window, Env, CaretContainer, CaretRangeFromPoint, Delay, Tools, VK) {
     return function (editor) {

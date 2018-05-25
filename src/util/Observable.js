@@ -14,9 +14,9 @@
  * @mixin tinymce.util.Observable
  */
 define(
-  'principleware-tinymce-tailor/src/util/Observable',
+  'polpware-tinymce-tailor/src/util/Observable',
   [
-    "principleware-tinymce-tailor/src/util/EventDispatcher"
+    "polpware-tinymce-tailor/src/util/EventDispatcher"
   ],
   function (EventDispatcher) {
     var getEventDispatcher = function (obj) {

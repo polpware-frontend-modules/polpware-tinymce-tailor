@@ -36,11 +36,11 @@
  * });
  */
 define(
-  'principleware-tinymce-tailor/src/util/JSONRequest',
+  'polpware-tinymce-tailor/src/util/JSONRequest',
   [
-    "principleware-tinymce-tailor/src/util/JSON",
-    "principleware-tinymce-tailor/src/util/XHR",
-    "principleware-tinymce-tailor/src/util/Tools"
+    "polpware-tinymce-tailor/src/util/JSON",
+    "polpware-tinymce-tailor/src/util/XHR",
+    "polpware-tinymce-tailor/src/util/Tools"
   ],
   function (JSON, XHR, Tools) {
     var extend = Tools.extend;

@@ -9,7 +9,7 @@
  */
 
 define(
-  'principleware-tinymce-tailor/src/util/LazyEvaluator',
+  'polpware-tinymce-tailor/src/util/LazyEvaluator',
   [
     'ephox.katamari.api.Option'
   ],
