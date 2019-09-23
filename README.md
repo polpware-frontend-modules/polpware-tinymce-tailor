@@ -1,3 +1,10 @@
+# Changes
+
+We do not recommend to use this package in a new project any more, as
+there are alternative packages in Typescript. Thus, our depending
+packages, in the future, will stop using this packages. However, this
+library will remain as it was to support any legacy project.
+
 # Introduction
 
 We leverage *TinyMCE* to generate a set of modules, named as
@@ -9,7 +16,7 @@ with AMD, and thus accessible in *ES6* module system.
 To use this package, simply clone it and install it from your disk. Or
 run the command as follows:
 
-> yarn add https://github.com/polpware/polpware-tinymce-tailor.git
+> yarn add https://github.com/polpware-frontend-modules/polpware-tinymce-tailor.git
 
 ## Example
 
