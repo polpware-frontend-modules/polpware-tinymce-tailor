@@ -1,0 +1,36 @@
+* TODO Plan
+  - [X] Arr.js
+    - @ephox/katamari
+  - [X] Class.js
+    - @ephox/sugar
+  - [X] Color.js
+    - Remove
+  - [X] Delay.js
+    - tinymce/src/core/main/ts/api/util
+  - [X] EventDispatcher.js
+    - tinymce/src/core/main/ts/api/util    
+  - [ ] Fun.js
+    - @ephox/katamari
+  - [X] I18n.js
+    - tinymce/src/core/main/ts/api/util
+  - [ ] JSON.js
+  - [ ] JSONP.js
+  - [ ] JSONRequest.js
+  - [ ] LazyEvaluator.js
+    - tinymce/src/core/main/ts/util
+  - [ ] LocalStorage.js
+    - tinymce/src/core/main/ts/api/util
+  - [ ] Observable.js
+    - tinymce/src/core/main/ts/api/util
+  - [ ] Private.js
+  - [ ] Promise.js
+  - [ ] Quirks.js
+  - [ ] Tools.js
+    - tinymce/src/core/main/ts/api/util
+  - [ ] URI.js
+    - tinymce/src/core/main/ts/api/util
+  - [ ] Uuid.js
+    - tinymce/src/core/main/ts/api/util    
+  - [ ] VK.js
+    - tinymce/src/core/main/ts/api/util    
+  - [ ] XHR.js
