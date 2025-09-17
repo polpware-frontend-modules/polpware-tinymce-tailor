@@ -3,6 +3,7 @@
         /* Build Options */
         "target": "ES2020",                // Compile to a modern JavaScript version
         "module": "ES2020",               // Generate modern ES Module syntax (import/export)
+        "lib": ["ES2021", "DOM"],        
         "moduleResolution": "bundler", 
         "outDir": "./dist",               // Where to output the compiled JavaScript
         "rootDir": "./tinymce",           // The root directory of your source files
