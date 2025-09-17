@@ -1,19 +1,33 @@
 {
-  "name": "polpware-tinymce-tailor",
-  "version": "4.7.9",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/polpware-frontend-modules/polpware-tinymce-tailor.git"
-  },
-  "description": "A set of self-contained utilities generated from TinyMCE",
-  "author": "Tom Tang",
-  "license": "LGPL-2.1",
-  "private": true,
-  "engines": {
-    "node": ">=0.10.26"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+    "name": "@polpware/tinymce-tailor",
+    "version": "0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/polpware-frontend-modules/polpware-tinymce-tailor.git"
+    },
+    "description": "A set of self-contained utilities generated from TinyMCE",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build": "npm run clean && tsc"
+    },
+    "files": [
+        "dist"
+    ],    
+    "author": "Tom Tang",
+    "license": "LGPL-2.1",
+    "private": true,
+    "engines": {
+        "node": ">=0.10.26"
+    },
+    "dependencies": {
+        "@ephox/katamari": "^9.1.6",
+        "@ephox/sand": "^6.0.10",
+        "@ephox/sugar": "^9.3.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"        
+    }
 }
