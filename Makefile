@@ -2,6 +2,6 @@
 
 
 BuildDist := ./dist/
-DeployTarget := ./submdoules/dist
+DeployTarget := ./submodules/dist
 
 include Makefile.deployment
