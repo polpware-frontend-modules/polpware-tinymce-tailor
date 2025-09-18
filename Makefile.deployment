@@ -1,0 +1,41 @@
+# deployment
+
+prepare-current:
+	echo "Make sure that we are the master branch"
+	cd $(DeployTarget) && git checkout master && git pull
+
+prepare-branch:
+	@echo "--> Ensuring branch $(Branch) exists and is tracking the remote..."
+	cd $(DeployTarget) && \
+	(git checkout $(Branch) || (git checkout -b $(Branch) && git push -u origin $(Branch))) && \
+	git pull
+
+build:
+	echo "Build ..."
+	npm run build
+	echo "Build done"
+
+copy:
+	echo "Clean old files ..."
+	cd $(DeployTarget) && find . -path ./.git -prune -o -name "README.md" -prune -o -name ".nojekyll" -prune -o -type f -exec rm {} \;
+	echo "Clean old files done"
+	echo "Copy files ..."
+	cp -r $(BuildDist)/* $(DeployTarget)/
+	echo "Copy files done"
+
+
+push:
+	echo "Find new files ..."
+	cd $(DeployTarget) && find . -path ./.git -prune -o -name "README.md" -prune -o -type f -exec git add {} \;
+	echo "Find new files done"
+	echo "Commit ..."
+	cd $(DeployTarget) && git commit -am "New publish"
+	echo "Commit done ..."
+	echo "Push ..."
+	cd $(DeployTarget) && git push
+	echo "Push done"
+
+deploy: build copy push
+
+
+.PHONY: build copy push deploy prepare-current prepare-branch
