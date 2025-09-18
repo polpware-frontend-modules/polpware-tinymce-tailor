@@ -1,3 +1,6 @@
 [submodule "submodules/tinymce"]
 	path = submodules/tinymce
 	url = https://principleware@github.com/principleware/tinymce.git
+[submodule "submodules/dist"]
+	path = submodules/dist
+	url = https://principleware@github.com/polpware-frontend-modules/polpware-tinymce-util.git
