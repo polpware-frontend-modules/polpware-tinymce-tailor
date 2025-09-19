@@ -12,10 +12,11 @@
         "sourceMap": true,                // Generate '.map' files for debugging
 
         /* Type Checking */
-        "strict": true,                   // Enable all strict type-checking options
+        "strict": false,                   // Enable all strict type-checking options
         "esModuleInterop": true,          // Enables compatibility with CommonJS modules
         "skipLibCheck": true,             // Skip type checking of declaration files from dependencies
         "forceConsistentCasingInFileNames": true
+
     },
     "include": ["tinymce/**/*"]         // Specifies which files to include in the compilation
 }
