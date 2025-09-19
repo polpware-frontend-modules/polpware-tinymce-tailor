@@ -1,3 +1,10 @@
+## 0.3.0 (September 19, 2025)
+  - Update Class definition
+  - Publish new version
+  - Bump version
+  - Install packages
+  - Add version control in the toolchain
+
 ## 0.2.0 (September 19, 2025)
 
 
