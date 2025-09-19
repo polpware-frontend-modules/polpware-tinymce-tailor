@@ -10,18 +10,21 @@ import Tools from './Tools';
 
 const { each, extend } = Tools;
 
-var extendClass, initializing;
+let extendClass: (prop: any) => any, initializing: boolean;
 
-var Class = function() {
+const Class: any = function() {
+    // empty constructor
 };
 
 // Provides classical inheritance, based on code made by John Resig
-Class['extend'] = extendClass = function(prop) {
-    var self = this, _super = self.prototype, prototype, name, member;
+Class.extend = extendClass = function(prop: any) {
+    const self = this, _super = self.prototype;
+    let prototype: any, name: string, member: any;
 
     // The dummy class constructor
-    var Class = function() {
-        var i, mixins, mixin, self = this;
+    const NewClass: any = function(this: any) {
+        let i: number, mixins: any[], mixin: any;
+        const self = this;
 
         // All construction is actually done in the init method
         if (!initializing) {
@@ -45,19 +48,19 @@ Class['extend'] = extendClass = function(prop) {
     };
 
     // Dummy function, needs to be extended in order to provide functionality
-    var dummy = function() {
+    const dummy = function(this: any) {
         return this;
     };
 
     // Creates a overloaded method for the class
     // this enables you to use this._super(); to call the super function
-    var createMethod = function(name, fn) {
-        return function() {
-            var self = this, tmp = self._super, ret;
+    const createMethod = function(name: string, fn: Function) {
+        return function(this: any) {
+            let tmp = this._super, ret: any;
 
-            self._super = _super[name];
-            ret = fn.apply(self, arguments);
-            self._super = tmp;
+            this._super = _super[name];
+            ret = fn.apply(this, arguments);
+            this._super = tmp;
 
             return ret;
         };
@@ -73,9 +76,9 @@ Class['extend'] = extendClass = function(prop) {
 
     // Add mixins
     if (prop.Mixins) {
-        each(prop.Mixins, function(mixin) {
-            for (var name in (mixin as Record<string, any>)) {
-                if (name !== "init") {
+        each(prop.Mixins, function(mixin: any) {
+            for (const name in mixin) {
+                if (name !== 'init') {
                     prop[name] = mixin[name];
                 }
             }
@@ -96,28 +99,27 @@ Class['extend'] = extendClass = function(prop) {
     // Generate property methods
     if (prop.Properties) {
         each(prop.Properties.split(','), function(name: string) {
-            var fieldName = '_' + name;
+            const fieldName = '_' + name;
 
-            prop[name] = function(value) {
-                var self = this, undef;
+            prop[name] = function(this: any, value?: any) {
+                let undef: any;
 
                 // Set value
                 if (value !== undef) {
-                    self[fieldName] = value;
-
-                    return self;
+                    this[fieldName] = value;
+                    return this;
                 }
 
                 // Get value
-                return self[fieldName];
+                return this[fieldName];
             };
         });
     }
 
     // Static functions
     if (prop.Statics) {
-        each(prop.Statics, function(func, name) {
-            Class[name] = func;
+        each(prop.Statics, function(func: Function, name: string) {
+            NewClass[name] = func;
         });
     }
 
@@ -130,7 +132,7 @@ Class['extend'] = extendClass = function(prop) {
     for (name in prop) {
         member = prop[name];
 
-        if (typeof member == "function" && _super[name]) {
+        if (typeof member === 'function' && _super[name]) {
             prototype[name] = createMethod(name, member);
         } else {
             prototype[name] = member;
@@ -138,15 +140,15 @@ Class['extend'] = extendClass = function(prop) {
     }
 
     // Populate our constructed prototype object
-    Class.prototype = prototype;
+    NewClass.prototype = prototype;
 
     // Enforce the constructor to be what we expect
-    Class.constructor = Class;
+    NewClass.constructor = NewClass;
 
     // And make this class extendible
-    Class['extend'] = extendClass;
+    NewClass.extend = extendClass;
 
-    return Class;
+    return NewClass;
 };
 
 export default Class;
