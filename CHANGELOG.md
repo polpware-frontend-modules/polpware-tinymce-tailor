@@ -1,3 +1,8 @@
+## 0.4.0 (September 19, 2025)
+  - Update Class def
+  - Publish new version
+  - Bump version
+
 ## 0.3.0 (September 19, 2025)
   - Update Class definition
   - Publish new version
