@@ -11,7 +11,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "clean": "rm -rf dist",
-        "build": "npm run clean && tsc && node scripts/postbuild.js"
+        "build": "npm run clean && tsc && node scripts/postbuild.js",
+        "bump": "gulp bump",        
     },
     "files": [
         "dist"
@@ -28,6 +29,9 @@
         "@ephox/sugar": "^9.3.1"
     },
     "devDependencies": {
-        "typescript": "^5.0.0"        
+        "typescript": "^5.0.0",
+        "gulp": "^5.0.1",
+        "gulp-bump": "^3.2.0",
+        "gulp-ignore": "^3.0.0",
     }
 }
