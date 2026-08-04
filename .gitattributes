@@ -1,0 +1,32 @@
+# Pin the text this repo owns to LF, regardless of the developer's
+# core.autocrlf setting.
+#
+# Without this, a Windows machine with core.autocrlf=true materialises every
+# file with CRLF on checkout while git stores LF, so every commit emits
+# "LF will be replaced by CRLF the next time Git touches it" and any tooling
+# that compares on-disk text against a stored or generated copy fails on line
+# endings alone.
+#
+# Matches the convention already used by polpware-libs-toolkit.
+* text=auto eol=lf
+
+*.ts   text eol=lf
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.scss text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+
+# Binary assets must never be line-ending converted.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
