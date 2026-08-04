@@ -1,37 +1,37 @@
 {
-    "name": "@polpware/tinymce-tailor",
-    "version": "0.4.0",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/polpware-frontend-modules/polpware-tinymce-tailor.git"
-    },
-    "description": "A set of self-contained utilities generated from TinyMCE",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "clean": "rm -rf dist",
-        "build": "npm run clean && tsc && node scripts/postbuild.js",
-        "bump": "gulp bump"
-    },
-    "files": [
-        "dist"
-    ],    
-    "author": "Tom Tang",
-    "license": "LGPL-2.1",
-    "private": true,
-    "engines": {
-        "node": ">=0.10.26"
-    },
-    "dependencies": {
-        "@ephox/katamari": "^9.1.6",
-        "@ephox/sand": "^6.0.10",
-        "@ephox/sugar": "^9.3.1"
-    },
-    "devDependencies": {
-        "typescript": "^5.0.0",
-        "gulp": "^5.0.1",
-        "gulp-bump": "^3.2.0",
-        "gulp-ignore": "^3.0.0"
-    }
+  "name": "@polpware/tinymce-tailor",
+  "version": "0.4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polpware-frontend-modules/polpware-tinymce-tailor.git"
+  },
+  "description": "A set of self-contained utilities generated from TinyMCE",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && node scripts/postbuild.js",
+    "bump": "gulp bump"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Tom Tang",
+  "license": "LGPL-2.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.26"
+  },
+  "dependencies": {
+    "@ephox/katamari": "^9.1.6",
+    "@ephox/sand": "^6.0.10",
+    "@ephox/sugar": "^9.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "gulp": "^5.0.1",
+    "gulp-bump": "^3.2.0",
+    "gulp-ignore": "^3.0.0"
+  }
 }
