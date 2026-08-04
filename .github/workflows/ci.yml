@@ -1,0 +1,50 @@
+name: CI
+
+# Library-layer gate (L0) for a NON-Angular package: does it still install and
+# build from a clean checkout?
+#
+# This repo has no angular.json, so there is no per-project enumeration and no
+# `ng test` — the gate is the package's own build script. Narrower than the
+# Angular repos' gate by necessity, and that is stated rather than implied.
+#
+# No token needed: dependencies resolve from the public registry and the public
+# polpware-frontend-modules org.
+
+on:
+  pull_request:
+    branches: [esm, master, main]
+  push:
+    branches: [esm, master, main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Install and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Fail loudly rather than pass having done nothing: this gate is only
+      # meaningful if a build script actually exists.
+      - name: Build
+        run: |
+          set -euo pipefail
+          HAS=$(node -e "console.log((require('./package.json').scripts||{}).build?'yes':'no')")
+          if [ "$HAS" != "yes" ]; then
+            echo "::error title=No build script::package.json declares no build script - this gate would pass having built nothing."
+            exit 1
+          fi
+          npm run build
